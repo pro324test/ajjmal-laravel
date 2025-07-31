@@ -3,10 +3,14 @@
 namespace App\Livewire;
 
 use Livewire\Component;
+use Livewire\Attributes\Layout;
+use Livewire\Attributes\Title;
 use App\Models\Product;
 use App\Models\Category;
 use App\Models\Vendor;
 
+#[Layout('layouts.app')]
+#[Title('MarketHub - Your Multivendor Marketplace')]
 class Home extends Component
 {
     public function render()
@@ -32,6 +36,6 @@ class Home extends Component
             'featuredProducts' => $featuredProducts,
             'categories' => $categories,
             'vendors' => $vendors,
-        ])->layout('layouts.app', ['title' => 'MarketHub - Your Multivendor Marketplace']);
+        ]);
     }
 }

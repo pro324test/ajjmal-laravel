@@ -1,3 +1,71 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom enhancements for modern UI */
+@layer base {
+    body {
+        background-color: rgb(249 250 251);
+    }
+}
+
+@layer components {
+    .btn-primary {
+        background: linear-gradient(to right, rgb(37 99 235), rgb(29 78 216));
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        transform: translateY(0);
+    }
+    
+    .btn-primary:hover {
+        background: linear-gradient(to right, rgb(29 78 216), rgb(30 64 175));
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        transform: translateY(-2px);
+    }
+    
+    .btn-secondary {
+        border: 2px solid white;
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        transform: translateY(0);
+    }
+    
+    .btn-secondary:hover {
+        background-color: white;
+        color: rgb(37 99 235);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        transform: translateY(-2px);
+    }
+    
+    .card {
+        background-color: white;
+        border-radius: 0.75rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        transform: translateY(0);
+    }
+    
+    .card:hover {
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        transform: translateY(-8px);
+    }
+    
+    .text-gradient {
+        background: linear-gradient(to right, rgb(37 99 235), rgb(147 51 234));
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+    
+    .hero-gradient {
+        background: linear-gradient(135deg, rgb(37 99 235) 0%, rgb(29 78 216) 50%, rgb(109 40 217) 100%);
+    }
+}
